@@ -1,0 +1,314 @@
+/* ── Reset & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element selector: body */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a1a0f;
+  padding: 0 16px;
+  cursor: none;
+}
+
+/* ID selector: #fog-canvas */
+#fog-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Element selector: header */
+header {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 48px 0 8px;
+}
+
+/* ID selector: #profile-photo */
+#profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Element selector: main */
+main {
+  width: 100%;
+  max-width: 480px;
+  padding: 0 0 32px;
+}
+
+/* Class selector: .section-title */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-left: 4px;
+  border-bottom: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Class selector: .link-card */
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 24px;
+  margin-bottom: 10px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.link-card img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Icon-only link (future use) */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.icon-link img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.08);
+}
+
+.link-card:hover,
+.link-card:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+/* Class selector: .about-text */
+.about-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 18px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ── Experience ── */
+.experience-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 10px;
+}
+
+.experience-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px;
+}
+
+.experience-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1px;
+}
+
+.experience-item p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ── Skills ── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+}
+
+.skills-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.skills-grid img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ── Education ── */
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.education-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px;
+}
+
+.education-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1px;
+}
+
+.education-item p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ── Certifications ── */
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.cert-card:hover,
+.cert-card:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.cert-card img {
+  width: 44px;
+  height: 44px;
+}
+
+.cert-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1px;
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Element selector: footer */
+footer {
+  width: calc(100% + 32px);
+  align-self: stretch;
+  text-align: center;
+  padding: 14px 16px 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+  margin-left: -16px;
+  margin-right: -16px;
+}
