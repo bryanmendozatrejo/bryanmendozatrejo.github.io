@@ -68,7 +68,6 @@
 
   document.addEventListener('mousemove', e => onMove(e.clientX, e.clientY));
   document.addEventListener('touchmove', e => {
-    e.preventDefault();
     onMove(e.touches[0].clientX, e.touches[0].clientY);
-  }, { passive: false });
+  }, { passive: true });
 })();
